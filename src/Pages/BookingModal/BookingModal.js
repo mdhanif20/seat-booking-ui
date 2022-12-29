@@ -41,7 +41,7 @@ const BookingModal = ({open,handleClose,modalData}) => {
         if(bookinData.name == "" && bookinData.email == "" && bookinData.phoneNumber==""){
             alert("Please, fill up properly name, email and phone number")
         }else{
-            const url = `http://localhost:5000/bookingSeat/${id}`;
+            const url = `https://seat-booking.onrender.com/bookingSeat/${id}`;
             fetch(url,{
                 method:"PUT",
                 headers:{
@@ -104,7 +104,8 @@ const BookingModal = ({open,handleClose,modalData}) => {
                 size="small"
                 />
             </Typography>
-            <Button onClick={()=>bookingSeat(`${modalData._id}`)} style={{backgroundColor:'#23272b',color:"#fff",mt:2}}>Book Now</Button>
+            <br />
+            <Button onClick={()=>bookingSeat(`${modalData._id}`)} style={{backgroundColor:'#23272b',color:"#fff",mt:3}}>Book Now</Button>
             </Box>
       </Modal>
     );

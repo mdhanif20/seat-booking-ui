@@ -15,7 +15,7 @@ const SetInfo = () => {
     }
     const handleClose = () => setOpen(false);
     useEffect(()=>{
-        fetch("http://localhost:5000/allSeatInfo")
+        fetch("https://seat-booking.onrender.com/allSeatInfo")
         .then(res => res.json())
         .then(data => setAllSeat(data))
     },[handleOpen])
